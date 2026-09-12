@@ -1,6 +1,6 @@
 "use client";
 
-import { useActionState, useState } from "react";
+import { useActionState, useState, type ReactNode } from "react";
 import { submitMembershipApplication, type MembershipFormState } from "@/app/actions/membership";
 
 type Option = { value: string; label: string };
@@ -40,7 +40,7 @@ const initialState: MembershipFormState = {
   fieldErrors: {},
 };
 
-export function MembershipApplicationForm({ copy }: { copy: ApplicationCopy }) {
+export function MembershipApplicationForm({ copy, locale }: { copy: ApplicationCopy; locale: "es" | "en" }) {
   const [state, formAction, isPending] = useActionState(submitMembershipApplication, initialState);
   const [values, setValues] = useState({
     organization: "",
@@ -72,7 +72,7 @@ export function MembershipApplicationForm({ copy }: { copy: ApplicationCopy }) {
   };
 
   return (
-    <form action={formAction} className="application-form" noValidate>
+    <form action={formAction} className="application-form" noValidate>\n      <input type="hidden" name="locale" value={locale} />
       <div className="honeypot" aria-hidden="true">
         <label htmlFor="website">Website</label>
         <input id="website" name="website" type="text" tabIndex={-1} autoComplete="off" />
@@ -228,7 +228,7 @@ function Field({
   required?: string;
   optional?: string;
   error?: string;
-  children: React.ReactNode;
+  children: ReactNode;
 }) {
   return (
     <label className="form-field">
