@@ -48,15 +48,15 @@ export default async function LocaleLayout({
               <span><strong>CBIAT</strong><small>Costa Rica</small></span>
             </Link>
             <nav className="desktop-nav" aria-label="Primary">
-              <a href="#camara">{d.nav.about}</a>
-              <a href="#trabajo">{d.nav.work}</a>
-              <a href="#agenda">{d.nav.agenda}</a>
-              <a href="#participacion">{d.nav.participation}</a>
-              <a href="#conocimiento">{d.nav.knowledge}</a>
+              <Link href={`/${lang}#camara`}>{d.nav.about}</Link>
+              <Link href={`/${lang}#trabajo`}>{d.nav.work}</Link>
+              <Link href={`/${lang}#agenda`}>{d.nav.agenda}</Link>
+              <Link href={`/${lang}#participacion`}>{d.nav.participation}</Link>
+              <Link href={`/${lang}#conocimiento`}>{d.nav.knowledge}</Link>
             </nav>
             <div className="header-actions">
               <Link className="lang-link" href={`/${altLang}`}>{altLabel}</Link>
-              <a className="button button-dark button-small" href="#afiliate">{d.nav.join}</a>
+              <Link className="button button-dark button-small" href={`/${lang}/afiliate`}>{d.nav.join}</Link>
             </div>
           </div>
         </header>
