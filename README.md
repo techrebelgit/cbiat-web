@@ -35,3 +35,16 @@ Spanish is the primary launch language. English is implemented from day one so c
 ## Brand assets
 
 The current header uses a temporary geometric CBIAT mark. Replace it with the official logo asset when received.
+
+
+## Membership application email
+
+The membership form at `/[lang]/afiliate` sends applications server-side using the Resend HTTP API.
+
+Copy `.env.example` to `.env.local` for local development and configure these environment variables in the deployment platform:
+
+- `RESEND_API_KEY` — Resend API key.
+- `CBIAT_FORM_FROM_EMAIL` — verified sender, for example `CBIAT <formularios@cbiat.org>`.
+- `CBIAT_FORM_TO_EMAIL` — optional destination; defaults to `info@cbiat.org`.
+
+The form uses server-side validation plus a honeypot field for basic spam mitigation. No provider credentials are exposed to the browser.
