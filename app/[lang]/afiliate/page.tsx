@@ -64,7 +64,7 @@ export default async function ApplicationPage({
             </ol>
           </aside>
           <div>
-            <MembershipApplicationForm copy={a} />
+            <MembershipApplicationForm copy={a} locale={lang} />
           </div>
         </div>
       </section>
