@@ -154,5 +154,109 @@
     "email": "info@cbiat.org",
     "location": "Costa Rica",
     "language": "Español"
+  },
+  "application": {
+    "metaTitle": "Membership | CBIAT Costa Rica",
+    "metaDescription": "Request information about joining CBIAT and participating in the development of Costa Rica's technology ecosystem.",
+    "kicker": "Membership",
+    "title": "Join the people building Costa Rica's technology future.",
+    "intro": "Complete this form to learn about participation and membership options at CBIAT. Our team will review the information and follow up with you.",
+    "noteTitle": "What happens next?",
+    "noteBody": "Submitting this form does not create an automatic membership. CBIAT will review each request and follow up to better understand the organization and its interest in participating.",
+    "asideKicker": "Process",
+    "asideTitle": "A conversation before membership.",
+    "steps": [
+      "Send the basic information about your organization and areas of interest.",
+      "The CBIAT team will review the request and coordinate the appropriate follow-up.",
+      "We will discuss participation, benefits and fit with the Chamber."
+    ],
+    "successTitle": "Request received",
+    "form": {
+      "organization": "Organization / company",
+      "organizationPlaceholder": "Organization name",
+      "contactName": "Contact name",
+      "contactNamePlaceholder": "Full name",
+      "role": "Role / title",
+      "rolePlaceholder": "E.g. Managing Director, founder, academic director",
+      "email": "Email",
+      "emailPlaceholder": "name@organization.com",
+      "phone": "Phone",
+      "phonePlaceholder": "+506 ...",
+      "organizationType": "Organization type",
+      "organizationTypePlaceholder": "Select an option",
+      "organizationTypes": [
+        {
+          "value": "company",
+          "label": "Company"
+        },
+        {
+          "value": "startup",
+          "label": "Startup"
+        },
+        {
+          "value": "academia",
+          "label": "Academia"
+        },
+        {
+          "value": "public-sector",
+          "label": "Public sector"
+        },
+        {
+          "value": "investor",
+          "label": "Investor"
+        },
+        {
+          "value": "nonprofit",
+          "label": "Nonprofit organization"
+        },
+        {
+          "value": "professional",
+          "label": "Professional / independent"
+        },
+        {
+          "value": "other",
+          "label": "Other"
+        }
+      ],
+      "areas": "Areas of interest",
+      "areasHelp": "Select one or more areas where you would like to participate or collaborate.",
+      "areaOptions": [
+        {
+          "value": "ai-governance",
+          "label": "AI and governance"
+        },
+        {
+          "value": "blockchain-digital-assets",
+          "label": "Blockchain, tokenization and digital assets"
+        },
+        {
+          "value": "digital-identity",
+          "label": "Digital identity and sovereignty"
+        },
+        {
+          "value": "public-sector-innovation",
+          "label": "Innovation and modernization of government"
+        },
+        {
+          "value": "talent-competitiveness",
+          "label": "Talent and technology competitiveness"
+        },
+        {
+          "value": "education-research",
+          "label": "Education, research and standards"
+        },
+        {
+          "value": "international-cooperation",
+          "label": "Innovation and internationalization"
+        }
+      ],
+      "message": "Why are you interested in joining CBIAT?",
+      "messagePlaceholder": "Tell us briefly about your organization, your goals and how you would like to participate.",
+      "consent": "I authorize CBIAT to use this information to contact me and follow up on this request.",
+      "submit": "Submit request",
+      "submitting": "Submitting...",
+      "required": "Required",
+      "optional": "Optional"
+    }
   }
 }
