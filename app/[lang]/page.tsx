@@ -23,7 +23,7 @@ export default async function HomePage({ params }: { params: Promise<{ lang: str
             <div className="orbit orbit-a" />
             <div className="orbit orbit-b" />
             <div className="visual-center"><strong>CBIAT</strong><small>Costa Rica</small></div>
-            {d.hero.stakeholders.map((s, i) => <span className={\`stakeholder s\${i + 1}\`} key={s}>{String(i + 1).padStart(2, "0")} · {s}</span>)}
+            {d.hero.stakeholders.map((s, i) => <span className={`stakeholder s${i + 1}`} key={s}>{String(i + 1).padStart(2, "0")} · {s}</span>)}
           </div>
         </div>
         <div className="shell hero-rule"><span>Tecnología</span><span>Talento</span><span>Confianza</span><span>Desarrollo</span></div>
