@@ -154,5 +154,109 @@
     "email": "info@cbiat.org",
     "location": "Costa Rica",
     "language": "English"
+  },
+  "application": {
+    "metaTitle": "Afíliese | CBIAT Costa Rica",
+    "metaDescription": "Solicite información para formar parte de CBIAT y participar en el desarrollo del ecosistema tecnológico de Costa Rica.",
+    "kicker": "Afiliación",
+    "title": "Sea parte de quienes están construyendo el futuro tecnológico de Costa Rica.",
+    "intro": "Complete este formulario para conocer las opciones de participación y afiliación a CBIAT. Nuestro equipo revisará la información y se pondrá en contacto con usted.",
+    "noteTitle": "¿Qué sucede después?",
+    "noteBody": "Esta solicitud no constituye una afiliación automática. CBIAT revisará cada solicitud y dará seguimiento para conocer mejor a la organización y su interés en participar.",
+    "asideKicker": "Proceso",
+    "asideTitle": "Una conversación antes de afiliarse.",
+    "steps": [
+      "Envíe la información básica de su organización y sus áreas de interés.",
+      "El equipo de CBIAT revisará la solicitud y coordinará el seguimiento correspondiente.",
+      "Conversaremos sobre participación, beneficios y el encaje con la Cámara."
+    ],
+    "successTitle": "Solicitud recibida",
+    "form": {
+      "organization": "Organización / empresa",
+      "organizationPlaceholder": "Nombre de la organización",
+      "contactName": "Nombre de contacto",
+      "contactNamePlaceholder": "Nombre y apellidos",
+      "role": "Cargo / rol",
+      "rolePlaceholder": "Ej. Gerencia, fundador, directora académica",
+      "email": "Correo electrónico",
+      "emailPlaceholder": "nombre@organizacion.com",
+      "phone": "Teléfono",
+      "phonePlaceholder": "+506 ...",
+      "organizationType": "Tipo de organización",
+      "organizationTypePlaceholder": "Seleccione una opción",
+      "organizationTypes": [
+        {
+          "value": "company",
+          "label": "Empresa"
+        },
+        {
+          "value": "startup",
+          "label": "Startup"
+        },
+        {
+          "value": "academia",
+          "label": "Academia"
+        },
+        {
+          "value": "public-sector",
+          "label": "Sector público"
+        },
+        {
+          "value": "investor",
+          "label": "Inversionista"
+        },
+        {
+          "value": "nonprofit",
+          "label": "Organización sin fines de lucro"
+        },
+        {
+          "value": "professional",
+          "label": "Profesional / independiente"
+        },
+        {
+          "value": "other",
+          "label": "Otro"
+        }
+      ],
+      "areas": "Áreas de interés",
+      "areasHelp": "Seleccione una o varias áreas en las que le interesa participar o colaborar.",
+      "areaOptions": [
+        {
+          "value": "ai-governance",
+          "label": "IA y gobernanza"
+        },
+        {
+          "value": "blockchain-digital-assets",
+          "label": "Blockchain, tokenización y activos digitales"
+        },
+        {
+          "value": "digital-identity",
+          "label": "Identidad y soberanía digital"
+        },
+        {
+          "value": "public-sector-innovation",
+          "label": "Innovación y modernización del Estado"
+        },
+        {
+          "value": "talent-competitiveness",
+          "label": "Talento y competitividad tecnológica"
+        },
+        {
+          "value": "education-research",
+          "label": "Educación, investigación y estándares"
+        },
+        {
+          "value": "international-cooperation",
+          "label": "Innovación e internacionalización"
+        }
+      ],
+      "message": "¿Por qué le interesa formar parte de CBIAT?",
+      "messagePlaceholder": "Cuéntenos brevemente sobre su organización, sus objetivos y cómo le gustaría participar.",
+      "consent": "Autorizo a CBIAT a utilizar esta información para contactarme y dar seguimiento a esta solicitud.",
+      "submit": "Enviar solicitud",
+      "submitting": "Enviando...",
+      "required": "Requerido",
+      "optional": "Opcional"
+    }
   }
 }
