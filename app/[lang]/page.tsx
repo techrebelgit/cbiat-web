@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getDictionary, isLocale } from "@/lib/i18n";
 
@@ -16,7 +17,7 @@ export default async function HomePage({ params }: { params: Promise<{ lang: str
             <p className="hero-body">{d.hero.body}</p>
             <div className="hero-actions">
               <a className="button button-gold" href="#camara">{d.hero.primary}</a>
-              <a className="text-link" href="#afiliate">{d.hero.secondary} ↗</a>
+              <Link className="text-link" href={`/${lang}/afiliate`}>{d.hero.secondary} ↗</Link>
             </div>
           </div>
           <div className="hero-visual">
@@ -99,7 +100,7 @@ export default async function HomePage({ params }: { params: Promise<{ lang: str
         <div className="shell membership-grid">
           {d.membership.pillars.map((item, i) => <article key={item.title}><span>{String(i + 1).padStart(2, "0")}</span><h3>{item.title}</h3><p>{item.body}</p></article>)}
         </div>
-        <div className="shell membership-cta"><a className="button button-dark" href="mailto:info@cbiat.org">{d.membership.cta}</a></div>
+        <div className="shell membership-cta"><Link className="button button-dark" href={`/${lang}/afiliate`}>{d.membership.cta}</Link></div>
       </section>
     </main>
   );
