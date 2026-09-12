@@ -1,0 +1,158 @@
+{
+  "meta": {
+    "title": "CBIAT | Cámara Costarricense de Blockchain, IA y Tecnologías Emergentes",
+    "description": "CBIAT articula industria, academia, Estado y sociedad para fortalecer el ecosistema tecnológico costarricense."
+  },
+  "nav": {
+    "about": "La Cámara",
+    "agenda": "Agenda",
+    "work": "Nuestro trabajo",
+    "participation": "Participación",
+    "knowledge": "Conocimiento",
+    "join": "Afíliese"
+  },
+  "hero": {
+    "eyebrow": "Cámara Costarricense de Blockchain, Inteligencia Artificial y Tecnologías Emergentes",
+    "title": "Tecnología que impulsa un mejor Costa Rica.",
+    "body": "Articulamos al sector privado, la academia, el sector público y la sociedad para fortalecer el ecosistema tecnológico costarricense e impulsar una adopción ética, responsable, competitiva y sostenible.",
+    "primary": "Conozca CBIAT",
+    "secondary": "Afíliese",
+    "stakeholders": [
+      "Industria",
+      "Academia",
+      "Estado",
+      "Sociedad"
+    ]
+  },
+  "statement": {
+    "kicker": "Nuestro propósito",
+    "text": "Ordenamos la conversación pública, reducimos la fragmentación del mercado, elevamos estándares y convertimos la innovación dispersa en una agenda institucional con impacto para el país."
+  },
+  "work": {
+    "kicker": "Nuestro trabajo",
+    "title": "Una plataforma de acción multisectorial.",
+    "intro": "CBIAT conecta conocimiento técnico, representación sectorial y cooperación para convertir desafíos tecnológicos en oportunidades concretas para Costa Rica.",
+    "items": [
+      {
+        "number": "01",
+        "title": "Incidencia pública y regulatoria",
+        "body": "Participamos en consultas públicas, mesas técnicas, procesos regulatorios e iniciativas legislativas, aportando criterios técnicos y acompañamiento institucional."
+      },
+      {
+        "number": "02",
+        "title": "Ecosistema y competitividad",
+        "body": "Articulamos empresas, startups, academia, inversionistas y proveedores tecnológicos para acelerar adopción responsable y generar oportunidades."
+      },
+      {
+        "number": "03",
+        "title": "Educación, investigación y estándares",
+        "body": "Promovemos formación, observatorios, estudios, whitepapers, buenas prácticas, marcos de gobernanza y estándares voluntarios."
+      },
+      {
+        "number": "04",
+        "title": "Innovación e internacionalización",
+        "body": "Impulsamos pilotos, sandboxes, transferencia de conocimiento, alianzas estratégicas y cooperación técnica nacional e internacional."
+      }
+    ]
+  },
+  "agenda": {
+    "kicker": "Agenda institucional",
+    "title": "Prioridades para un ecosistema tecnológico más fuerte.",
+    "items": [
+      {
+        "title": "IA y gobernanza",
+        "body": "Impulsar una adopción segura, ética y responsable de la inteligencia artificial en Costa Rica."
+      },
+      {
+        "title": "Blockchain, tokenización y activos digitales",
+        "body": "Fomentar casos de uso con impacto económico y social."
+      },
+      {
+        "title": "Identidad y soberanía digital",
+        "body": "Promover soluciones de identidad digital seguras, inclusivas y centradas en el ciudadano."
+      },
+      {
+        "title": "Innovación y modernización del Estado",
+        "body": "Apoyar la transformación digital del sector público mediante tecnología e innovación."
+      },
+      {
+        "title": "Talento y competitividad tecnológica",
+        "body": "Fortalecer el talento humano y las capacidades del país para una economía digital competitiva."
+      }
+    ]
+  },
+  "purpose": {
+    "kicker": "La Cámara",
+    "title": "Rigor técnico. Independencia. Transparencia. Gobernanza responsable.",
+    "body": "CBIAT es una cámara privada, técnica, multisectorial y sin fines de lucro. Representa, articula y fortalece el ecosistema costarricense vinculado a tecnologías emergentes.",
+    "principles": [
+      {
+        "title": "Rigor técnico",
+        "body": "Decisiones basadas en evidencia, conocimiento especializado y mejores prácticas internacionales."
+      },
+      {
+        "title": "Independencia",
+        "body": "Autonomía y actuación en función del interés general del ecosistema y del país."
+      },
+      {
+        "title": "Transparencia",
+        "body": "Gestión abierta, ética y con rendición de cuentas."
+      },
+      {
+        "title": "Gobernanza responsable",
+        "body": "Diálogo inclusivo, plural y con visión de largo plazo."
+      }
+    ]
+  },
+  "participation": {
+    "kicker": "Participación",
+    "title": "De la conversación a la acción.",
+    "intro": "La Cámara crea espacios concretos para producir conocimiento, construir propuestas y ejecutar iniciativas con impacto.",
+    "items": [
+      "Comités técnicos",
+      "Observatorios sectoriales",
+      "Mesas de política pública",
+      "Proyectos piloto y sandboxes",
+      "Cooperación nacional e internacional"
+    ]
+  },
+  "knowledge": {
+    "kicker": "Conocimiento",
+    "title": "Mejores decisiones requieren mejor información.",
+    "body": "El centro de conocimiento de CBIAT reunirá estudios, whitepapers, observatorios, criterios técnicos y posiciones institucionales para apoyar al sector y a los tomadores de decisión.",
+    "formats": [
+      "Estudios",
+      "Whitepapers",
+      "Observatorios",
+      "Criterios técnicos"
+    ],
+    "status": "Centro de conocimiento en desarrollo"
+  },
+  "membership": {
+    "kicker": "Membresía",
+    "title": "Participe en la construcción del entorno tecnológico de Costa Rica.",
+    "body": "Ser parte de CBIAT significa acceder a espacios de incidencia, inteligencia regulatoria y sectorial, conocimiento especializado, cooperación y posicionamiento institucional.",
+    "pillars": [
+      {
+        "title": "Incidencia y representación",
+        "body": "Participe en la conversación sectorial y contribuya a un entorno competitivo y responsable para la innovación."
+      },
+      {
+        "title": "Conocimiento y formación",
+        "body": "Acceda a inteligencia regulatoria y de mercado, estudios, análisis, formación y mejores prácticas globales."
+      },
+      {
+        "title": "Conexiones y oportunidades",
+        "body": "Intégrese a una red multisectorial y genere alianzas, proyectos y oportunidades de alto impacto."
+      }
+    ],
+    "cta": "Solicite información"
+  },
+  "footer": {
+    "tagline": "Costa Rica conecta al mañana.",
+    "contact": "Contacto",
+    "email": "info@cbiat.org",
+    "location": "Costa Rica",
+    "language": "English"
+  }
+}
