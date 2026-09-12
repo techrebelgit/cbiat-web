@@ -16,7 +16,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     title: d.meta.title,
     description: d.meta.description,
     metadataBase: new URL("https://cbiat.org"),
-    alternates: { canonical: \`/\${lang}\`, languages: { es: "/es", en: "/en" } },
+    alternates: { canonical: `/${lang}`, languages: { es: "/es", en: "/en" } },
     openGraph: {
       title: d.meta.title,
       description: d.meta.description,
@@ -43,7 +43,7 @@ export default async function LocaleLayout({
       <body>
         <header className="site-header">
           <div className="shell header-inner">
-            <Link className="brand" href={\`/\${lang}\`} aria-label="CBIAT">
+            <Link className="brand" href={`/${lang}`} aria-label="CBIAT">
               <span className="brand-mark">C</span>
               <span><strong>CBIAT</strong><small>Costa Rica</small></span>
             </Link>
@@ -55,7 +55,7 @@ export default async function LocaleLayout({
               <a href="#conocimiento">{d.nav.knowledge}</a>
             </nav>
             <div className="header-actions">
-              <Link className="lang-link" href={\`/\${altLang}\`}>{altLabel}</Link>
+              <Link className="lang-link" href={`/${altLang}`}>{altLabel}</Link>
               <a className="button button-dark button-small" href="#afiliate">{d.nav.join}</a>
             </div>
           </div>
@@ -65,9 +65,9 @@ export default async function LocaleLayout({
           <div className="shell footer-grid">
             <div><div className="footer-brand">CBIAT</div><p>{d.footer.tagline}</p></div>
             <div className="footer-meta">
-              <div><span>{d.footer.contact}</span><a href={\`mailto:\${d.footer.email}\`}>{d.footer.email}</a></div>
+              <div><span>{d.footer.contact}</span><a href={`mailto:${d.footer.email}`}>{d.footer.email}</a></div>
               <div><span>{d.footer.location}</span><a href="https://cbiat.org">cbiat.org</a></div>
-              <div><span>{lang === "es" ? "Idioma" : "Language"}</span><Link href={\`/\${altLang}\`}>{d.footer.language}</Link></div>
+              <div><span>{lang === "es" ? "Idioma" : "Language"}</span><Link href={`/${altLang}`}>{d.footer.language}</Link></div>
             </div>
           </div>
           <div className="shell footer-bottom">
