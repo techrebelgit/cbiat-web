@@ -75,6 +75,39 @@ export async function submitMembershipApplication(
     };
   }
 
+  const locale = text(formData, "locale", 2) === "en" ? "en" : "es";
+  const errors = locale === "en"
+    ? {
+        organization: "Enter the organization name.",
+        contactName: "Enter the contact name.",
+        role: "Enter your role or title.",
+        email: "Enter a valid email address.",
+        organizationType: "Select the organization type.",
+        areas: "Select at least one area of interest.",
+        message: "Tell us briefly why you would like to participate.",
+        consent: "We need your permission to contact you.",
+        review: "Review the indicated fields and try again.",
+        notConfigured: "The request cannot be sent right now. Please try again later.",
+        sendFailed: "The request could not be sent. Your information was not delivered; please try again.",
+        generic: "An error occurred while sending the request. Please try again.",
+        success: "Thank you. We received your request and the CBIAT team will contact you soon.",
+      }
+    : {
+        organization: "Ingrese el nombre de la organización.",
+        contactName: "Ingrese el nombre de contacto.",
+        role: "Ingrese su cargo o rol.",
+        email: "Ingrese un correo electrónico válido.",
+        organizationType: "Seleccione el tipo de organización.",
+        areas: "Seleccione al menos un área de interés.",
+        message: "Cuéntenos brevemente por qué desea participar.",
+        consent: "Necesitamos su autorización para contactarle.",
+        review: "Revise los campos indicados e intente nuevamente.",
+        notConfigured: "No fue posible enviar la solicitud en este momento. Intente nuevamente más tarde.",
+        sendFailed: "No fue posible enviar la solicitud. Sus datos no se enviaron; por favor intente nuevamente.",
+        generic: "Ocurrió un error al enviar la solicitud. Por favor intente nuevamente.",
+        success: "Gracias. Hemos recibido su solicitud y el equipo de CBIAT le contactará próximamente.",
+      };
+
   const organization = text(formData, "organization", 160);
   const contactName = text(formData, "contactName", 120);
   const role = text(formData, "role", 120);
@@ -87,19 +120,19 @@ export async function submitMembershipApplication(
 
   const fieldErrors: MembershipFormState["fieldErrors"] = {};
 
-  if (organization.length < 2) fieldErrors.organization = "Ingrese el nombre de la organización.";
-  if (contactName.length < 2) fieldErrors.contactName = "Ingrese el nombre de contacto.";
-  if (role.length < 2) fieldErrors.role = "Ingrese su cargo o rol.";
-  if (!EMAIL_RE.test(email)) fieldErrors.email = "Ingrese un correo electrónico válido.";
-  if (!organizationTypes.has(organizationType)) fieldErrors.organizationType = "Seleccione el tipo de organización.";
-  if (areas.length === 0) fieldErrors.areas = "Seleccione al menos un área de interés.";
-  if (message.length < 10) fieldErrors.message = "Cuéntenos brevemente por qué desea participar.";
-  if (!consent) fieldErrors.consent = "Necesitamos su autorización para contactarle.";
+  if (organization.length < 2) fieldErrors.organization = errors.organization;
+  if (contactName.length < 2) fieldErrors.contactName = errors.contactName;
+  if (role.length < 2) fieldErrors.role = errors.role;
+  if (!EMAIL_RE.test(email)) fieldErrors.email = errors.email;
+  if (!organizationTypes.has(organizationType)) fieldErrors.organizationType = errors.organizationType;
+  if (areas.length === 0) fieldErrors.areas = errors.areas;
+  if (message.length < 10) fieldErrors.message = errors.message;
+  if (!consent) fieldErrors.consent = errors.consent;
 
   if (Object.keys(fieldErrors).length > 0) {
     return {
       status: "error",
-      message: "Revise los campos indicados e intente nuevamente.",
+      message: errors.review,
       fieldErrors,
     };
   }
@@ -112,7 +145,7 @@ export async function submitMembershipApplication(
     console.error("Membership form email is not configured. Missing RESEND_API_KEY or CBIAT_FORM_FROM_EMAIL.");
     return {
       status: "error",
-      message: "No fue posible enviar la solicitud en este momento. Intente nuevamente más tarde.",
+      message: errors.notConfigured,
       fieldErrors: {},
     };
   }
@@ -206,21 +239,21 @@ export async function submitMembershipApplication(
       console.error("Resend membership email failed:", response.status, detail);
       return {
         status: "error",
-        message: "No fue posible enviar la solicitud. Sus datos no se enviaron; por favor intente nuevamente.",
+        message: errors.sendFailed,
         fieldErrors: {},
       };
     }
 
     return {
       status: "success",
-      message: "Gracias. Hemos recibido su solicitud y el equipo de CBIAT le contactará próximamente.",
+      message: errors.success,
       fieldErrors: {},
     };
   } catch (error) {
     console.error("Membership form submission failed:", error);
     return {
       status: "error",
-      message: "Ocurrió un error al enviar la solicitud. Por favor intente nuevamente.",
+      message: errors.generic,
       fieldErrors: {},
     };
   }
