@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { MembershipApplicationModal } from "@/components/membership-application-modal";
+import { ResponsiveNavigation } from "@/components/responsive-navigation";
 import { notFound } from "next/navigation";
 import { getDictionary, isLocale, locales, type Locale } from "@/lib/i18n";
 import "../globals.css";
@@ -56,19 +57,7 @@ export default async function LocaleLayout({
               <Link href={`/${lang}#conocimiento`}>{d.nav.knowledge}</Link>
             </nav>
             <div className="header-actions">
-              <details className="mobile-nav">
-                <summary aria-label={lang === "es" ? "Abrir navegación" : "Open navigation"}>
-                  <span className="menu-label">{lang === "es" ? "Menú" : "Menu"}</span>
-                  <span className="menu-icon" aria-hidden="true"><i></i><i></i></span>
-                </summary>
-                <nav className="mobile-nav-panel" aria-label={lang === "es" ? "Navegación móvil" : "Mobile navigation"}>
-                  <Link href={`/${lang}#camara`}>{d.nav.about}</Link>
-                  <Link href={`/${lang}#trabajo`}>{d.nav.work}</Link>
-                  <Link href={`/${lang}#agenda`}>{d.nav.agenda}</Link>
-                  <Link href={`/${lang}#participacion`}>{d.nav.participation}</Link>
-                  <Link href={`/${lang}#conocimiento`}>{d.nav.knowledge}</Link>
-                </nav>
-              </details>
+              <ResponsiveNavigation lang={lang} labels={d.nav} />
               <Link className="lang-link" href={`/${altLang}`}>{altLabel}</Link>
               <MembershipApplicationModal copy={d.application} locale={lang} triggerLabel={d.nav.join} triggerClassName="button button-dark button-small" />
             </div>
