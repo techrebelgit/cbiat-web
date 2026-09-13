@@ -267,3 +267,101 @@ h1,h2,h3,p,a,span,strong{overflow-wrap:break-word}
   .mobile-nav summary{width:36px;padding:0 8px}
   .hero-rule span{min-width:0}
 }
+
+
+/* Hero responsive refinement */
+@media(max-width:1024px){
+  .hero-grid{
+    grid-template-columns:minmax(0,1fr);
+    gap:32px;
+    min-height:0;
+    padding:54px 0 38px;
+  }
+  .hero-grid>div:first-child{max-width:760px}
+  .hero h1{
+    font-size:clamp(50px,7.2vw,66px);
+    line-height:.96;
+    max-width:720px;
+  }
+  .hero-body{
+    font-size:17px;
+    line-height:1.55;
+    max-width:640px;
+    margin-top:24px;
+  }
+  .hero-actions{margin-top:28px}
+  .hero-visual{
+    min-height:315px;
+    max-width:760px;
+    width:100%;
+  }
+  .orbit-a{width:210px;height:210px}
+  .orbit-b{width:320px;height:320px}
+  .visual-center{width:112px;height:112px}
+  .visual-center strong{font-size:22px}
+  .stakeholder{font-size:10px}
+}
+
+@media(max-width:820px){
+  .hero-grid{padding:46px 0 34px;gap:26px}
+  .hero h1{
+    font-size:clamp(46px,8.5vw,58px);
+    line-height:.98;
+  }
+  .hero-body{font-size:16px;max-width:600px}
+  .hero-visual{min-height:285px}
+  .orbit-a{width:190px;height:190px}
+  .orbit-b{width:285px;height:285px}
+  .visual-center{width:102px;height:102px}
+  .hero-rule{margin-top:0}
+}
+
+/* On phones, remove the decorative hero visual entirely.
+   The content becomes one clean editorial column. */
+@media(max-width:700px){
+  .hero-grid{
+    display:block;
+    padding:42px 0 30px;
+  }
+  .hero-grid>div:first-child{max-width:none}
+  .hero-visual{display:none}
+  .hero .eyebrow{
+    max-width:32rem;
+    margin-bottom:14px;
+    line-height:1.45;
+  }
+  .hero h1{
+    font-size:clamp(42px,11vw,54px);
+    line-height:.98;
+    max-width:none;
+  }
+  .hero-body{
+    font-size:16px;
+    line-height:1.55;
+    margin-top:20px;
+    max-width:none;
+  }
+  .hero-actions{
+    margin-top:24px;
+    width:100%;
+    align-items:stretch;
+    flex-direction:column;
+    gap:10px;
+  }
+  .hero-actions>.button,
+  .hero-actions .modal-text-trigger{
+    width:100%;
+    justify-content:center;
+    text-align:center;
+  }
+  .hero-actions .modal-text-trigger{
+    border:1px solid var(--navy);
+    padding:14px 16px;
+  }
+}
+
+@media(max-width:420px){
+  .hero-grid{padding:36px 0 26px}
+  .hero h1{font-size:clamp(40px,12vw,50px)}
+  .hero-body{font-size:15.5px}
+}
