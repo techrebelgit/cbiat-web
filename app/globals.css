@@ -59,3 +59,143 @@ body:has(.membership-modal[open]){overflow:hidden}
 }
 
 .button{border:0;cursor:pointer}
+
+
+/* Main page responsive audit: small laptops, tablets and phones */
+.mobile-nav{display:none;position:relative}
+.mobile-nav summary{list-style:none;display:flex;align-items:center;gap:9px;min-height:42px;padding:0 10px;border:1px solid var(--line);cursor:pointer;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.08em}
+.mobile-nav summary::-webkit-details-marker{display:none}
+.menu-icon{width:18px;height:14px;display:flex;flex-direction:column;justify-content:center;gap:5px}
+.menu-icon i{display:block;height:1px;background:var(--navy);width:100%}
+.mobile-nav-panel{position:absolute;top:calc(100% + 12px);right:0;width:min(320px,calc(100vw - 32px));padding:10px;background:var(--paper);border:1px solid var(--line);box-shadow:0 20px 50px rgba(6,26,56,.16);z-index:40}
+.mobile-nav-panel a{display:block;padding:14px 12px;border-bottom:1px solid var(--line);font-size:14px;font-weight:700}
+.mobile-nav-panel a:last-child{border-bottom:0}
+.mobile-nav-panel a:hover{background:var(--blue)}
+
+/* Small laptops */
+@media(max-width:1180px){
+  .shell{width:min(calc(100% - 40px),var(--max))}
+  .header-inner{gap:20px}
+  .desktop-nav{gap:16px;font-size:13px}
+  .hero-grid{grid-template-columns:minmax(0,1.05fr) minmax(360px,.95fr);gap:40px;min-height:620px;padding:66px 0 52px}
+  .hero h1{font-size:clamp(58px,6vw,82px)}
+  .hero-body{font-size:18px}
+  .hero-visual{min-height:440px}
+  .split{grid-template-columns:1fr 2.55fr;gap:44px}
+  .statement,.work,.agenda,.principles,.participation,.knowledge,.membership{padding-top:96px;padding-bottom:96px}
+  .statement-text{font-size:clamp(42px,5vw,64px)}
+  .section-head h2,.agenda h2,.participation h2,.knowledge h2,.membership h2{font-size:clamp(44px,5vw,64px)}
+  .cards article{min-height:300px;padding:30px 30px 66px}
+  .cards h3{font-size:28px;margin-top:42px}
+  .principles-grid article{padding:24px}
+  .footer-grid{gap:44px}
+}
+
+/* Tablet landscape / compact laptop navigation */
+@media(max-width:1120px){
+  .desktop-nav{display:none}
+  .header-inner{grid-template-columns:auto 1fr auto}
+  .mobile-nav{display:block}
+  .header-actions{justify-self:end}
+  .principles-grid{grid-template-columns:repeat(2,1fr)}
+}
+
+/* Tablets */
+@media(max-width:960px){
+  .hero-grid{grid-template-columns:1fr;gap:38px;min-height:0;padding:58px 0 40px}
+  .hero-grid>div:first-child{max-width:760px}
+  .hero h1{font-size:clamp(56px,9vw,76px)}
+  .hero-visual{min-height:370px}
+  .split,.agenda-head,.participation-grid,.knowledge-grid{grid-template-columns:1fr;gap:30px}
+  .section-head{margin-bottom:42px}
+  .statement-text{max-width:820px}
+  .cards{grid-template-columns:repeat(2,1fr)}
+  .agenda-head{margin-bottom:34px}
+  .agenda-list article{grid-template-columns:48px 1fr 34px;gap:18px}
+  .agenda-list article p{grid-column:2/4}
+  .agenda-list h3{font-size:26px}
+  .participation-grid{gap:44px}
+  .knowledge-panel{padding:38px}
+  .membership-grid{grid-template-columns:repeat(2,1fr)}
+  .membership-grid article:last-child{grid-column:1/-1;min-height:220px}
+  .footer-grid{grid-template-columns:1fr;gap:42px}
+}
+
+/* Small tablets / large phones */
+@media(max-width:760px){
+  .shell{width:min(calc(100% - 32px),var(--max))}
+  .site-header{backdrop-filter:blur(10px)}
+  .header-inner{min-height:70px;gap:12px}
+  .brand-mark{width:36px;height:36px;font-size:21px}
+  .brand strong{font-size:18px}
+  .brand small{font-size:9px}
+  .header-actions{gap:7px}
+  .header-actions .button{display:inline-flex;min-height:40px;padding:0 12px;font-size:12px}
+  .menu-label{display:none}
+  .mobile-nav summary{width:40px;padding:0 10px;justify-content:center}
+  .hero-grid{padding:48px 0 34px}
+  .hero h1{font-size:clamp(48px,11vw,66px);line-height:.96}
+  .hero-body{font-size:17px;margin-top:24px}
+  .hero-actions{margin-top:28px}
+  .hero-visual{min-height:330px}
+  .orbit-a{width:230px;height:230px}
+  .orbit-b{width:350px;height:350px}
+  .visual-center{width:120px;height:120px}
+  .stakeholder{font-size:10px}
+  .hero-rule{grid-template-columns:repeat(2,1fr);padding:10px 0;row-gap:10px}
+  .hero-rule span{padding:6px 10px}
+  .statement,.work,.agenda,.principles,.participation,.knowledge,.membership{padding-top:72px;padding-bottom:72px}
+  .statement-text{font-size:clamp(38px,8vw,50px)}
+  .section-head h2,.agenda h2,.participation h2,.knowledge h2,.membership h2{font-size:clamp(38px,9vw,52px)}
+  .cards,.principles-grid,.membership-grid{grid-template-columns:1fr}
+  .membership-grid article:last-child{grid-column:auto}
+  .cards article{min-height:0;padding:26px 24px 58px}
+  .cards h3{margin-top:30px;font-size:26px}
+  .principles-grid{margin-top:44px}
+  .principles-grid article,.membership-grid article{min-height:0;padding:24px}
+  .principles-grid h3,.membership-grid h3{margin-top:30px}
+  .agenda-list article{grid-template-columns:34px 1fr 26px;padding:22px 0}
+  .agenda-list h3{font-size:23px}
+  .participation li{grid-template-columns:48px 1fr;min-height:70px}
+  .participation li strong{font-size:21px}
+  .knowledge-panel{padding:28px 24px}
+  .membership-cta{justify-content:stretch}
+  .membership-cta .button{width:100%}
+  .footer-meta{grid-template-columns:1fr}
+  .footer-bottom{flex-direction:column}
+}
+
+/* Phones */
+@media(max-width:520px){
+  .shell{width:min(calc(100% - 28px),var(--max))}
+  .header-inner{gap:8px}
+  .brand{gap:8px}
+  .brand small{display:none}
+  .header-actions .button{padding:0 10px;min-height:38px}
+  .lang-link{font-size:11px}
+  .mobile-nav summary{width:38px;min-height:38px}
+  .hero-grid{padding-top:40px}
+  .hero h1{font-size:clamp(44px,13vw,58px)}
+  .hero-body{font-size:16px;line-height:1.55}
+  .hero-actions{align-items:stretch;flex-direction:column;gap:10px;width:100%}
+  .hero-actions>.button{width:100%}
+  .hero-actions .modal-text-trigger{width:100%;text-align:center;border:1px solid var(--navy);padding:14px 16px}
+  .hero-visual{min-height:285px}
+  .orbit-a{width:190px;height:190px}
+  .orbit-b{width:300px;height:300px}
+  .visual-center{width:104px;height:104px}
+  .visual-center strong{font-size:21px}
+  .s1{top:11%;left:7%}.s2{top:13%;right:6%}.s3{bottom:11%;left:7%}.s4{bottom:13%;right:6%}
+  .hero-rule{font-size:10px;letter-spacing:.11em}
+  .statement,.work,.agenda,.principles,.participation,.knowledge,.membership{padding-top:62px;padding-bottom:62px}
+  .eyebrow,.kicker{font-size:10px;letter-spacing:.14em;margin-bottom:16px}
+  .statement-text{font-size:clamp(34px,10vw,44px)}
+  .section-head{margin-bottom:34px}
+  .section-head h2,.agenda h2,.participation h2,.knowledge h2,.membership h2{font-size:clamp(34px,10vw,44px)}
+  .intro{font-size:16px}
+  .agenda-list article{gap:12px}
+  .agenda-list h3{font-size:21px}
+  .agenda-list p{font-size:14px}
+  .footer-grid>div:first-child p{font-size:32px}
+  .site-footer{padding-top:60px}
+}
