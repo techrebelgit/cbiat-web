@@ -199,3 +199,71 @@ body:has(.membership-modal[open]){overflow:hidden}
   .footer-grid>div:first-child p{font-size:32px}
   .site-footer{padding-top:60px}
 }
+
+
+/* Horizontal overflow hardening — responsive QA */
+html,body{max-width:100%;overflow-x:clip}
+body,main,.site-header,.site-footer,section{min-width:0}
+.shell{max-width:var(--max)}
+.header-inner>*,.hero-grid>*,.split>*,.agenda-head>*,.agenda-list article>*,.principles-grid>*,.participation-grid>*,.knowledge-grid>*,.membership-grid>*,.footer-grid>*,.footer-meta>*,.cards>*{min-width:0}
+h1,h2,h3,p,a,span,strong{overflow-wrap:break-word}
+.desktop-nav,.header-actions,.hero-actions{min-width:0}
+.brand{min-width:0}
+.brand>span:last-child{min-width:0}
+.mobile-nav-panel{max-width:calc(100vw - 24px)}
+.hero,.hero-grid,.hero-rule,.hero-visual,.statement,.work,.agenda,.principles,.participation,.knowledge,.membership,.site-footer{max-width:100%}
+.hero-visual{width:100%}
+.cards,.principles-grid,.membership-grid,.agenda-list,.participation ol,.knowledge-panel{max-width:100%}
+.application-form,.form-grid,.areas-grid,.form-field,.form-field input,.form-field select,.form-field textarea{min-width:0;max-width:100%}
+.membership-modal-card,.membership-modal-intro{min-width:0}
+
+/* Prevent intrinsic grid sizing from exceeding narrow viewports. */
+.cards{grid-template-columns:repeat(2,minmax(0,1fr))}
+.principles-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+.membership-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.knowledge-grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+.footer-grid{grid-template-columns:minmax(0,1fr) minmax(0,1.6fr)}
+.footer-meta{grid-template-columns:repeat(3,minmax(0,1fr))}
+.participation-grid{grid-template-columns:minmax(0,1fr) minmax(0,1.1fr)}
+.split{grid-template-columns:minmax(0,1fr) minmax(0,3fr)}
+.agenda-head{grid-template-columns:minmax(0,1fr) minmax(0,3fr)}
+.agenda-list article{grid-template-columns:65px minmax(0,1.2fr) minmax(0,1fr) 40px}
+.hero-rule{grid-template-columns:repeat(4,minmax(0,1fr))}
+
+/* Small laptops: never allow the hero's right column to impose a hard minimum. */
+@media(max-width:1180px){
+  .hero-grid{grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr)}
+  .split{grid-template-columns:minmax(0,1fr) minmax(0,2.55fr)}
+}
+
+/* Tablets: all stacked sections explicitly reset intrinsic-width columns. */
+@media(max-width:960px){
+  .split,.agenda-head,.participation-grid,.knowledge-grid{grid-template-columns:minmax(0,1fr)}
+  .cards{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .membership-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .footer-grid{grid-template-columns:minmax(0,1fr)}
+  .agenda-list article{grid-template-columns:48px minmax(0,1fr) 34px}
+}
+
+/* Phones and small tablets */
+@media(max-width:760px){
+  .header-inner{grid-template-columns:minmax(0,1fr) auto}
+  .header-actions{max-width:100%;flex-shrink:0}
+  .brand strong{white-space:nowrap}
+  .hero-rule{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .cards,.principles-grid,.membership-grid,.form-grid,.areas-grid,.footer-meta{grid-template-columns:minmax(0,1fr)}
+  .agenda-list article{grid-template-columns:34px minmax(0,1fr) 26px}
+}
+
+/* Very small phones: shorten header footprint instead of forcing the viewport wider. */
+@media(max-width:420px){
+  .shell{width:calc(100% - 24px)}
+  .header-inner{gap:6px}
+  .brand-mark{width:34px;height:34px}
+  .brand strong{font-size:16px}
+  .header-actions{gap:5px}
+  .header-actions .button{padding:0 8px;font-size:11px}
+  .lang-link{font-size:10px}
+  .mobile-nav summary{width:36px;padding:0 8px}
+  .hero-rule span{min-width:0}
+}
