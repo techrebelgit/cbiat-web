@@ -35,7 +35,7 @@ export function MembershipApplicationModal({
 
   return (
     <>
-      <button type="button" className={triggerClassName} onClick={open}>
+      <button type="button" className={triggerClassName} onClick={open} suppressHydrationWarning>
         {triggerLabel}{showArrow ? " ↗" : ""}
       </button>
 
@@ -53,6 +53,7 @@ export function MembershipApplicationModal({
             className="modal-close"
             onClick={close}
             aria-label={locale === "es" ? "Cerrar formulario" : "Close form"}
+            suppressHydrationWarning
           >
             ×
           </button>
