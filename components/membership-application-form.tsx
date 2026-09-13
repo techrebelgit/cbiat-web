@@ -74,10 +74,10 @@ export function MembershipApplicationForm({ copy, locale }: { copy: ApplicationC
 
   return (
     <form action={formAction} className="application-form" noValidate>
-      <input type="hidden" name="locale" value={locale} />
+      <input type="hidden" name="locale" value={locale} suppressHydrationWarning />
       <div className="honeypot" aria-hidden="true">
         <label htmlFor={honeypotId}>Website</label>
-        <input id={honeypotId} name="website" type="text" tabIndex={-1} autoComplete="off" />
+        <input id={honeypotId} name="website" type="text" tabIndex={-1} autoComplete="off" suppressHydrationWarning />
       </div>
 
       {state.status === "error" && state.message && (
@@ -91,6 +91,7 @@ export function MembershipApplicationForm({ copy, locale }: { copy: ApplicationC
           error={state.fieldErrors.organization}
         >
           <input
+            suppressHydrationWarning
             name="organization"
             value={values.organization}
             onChange={(e) => setValues({ ...values, organization: e.target.value })}
@@ -106,6 +107,7 @@ export function MembershipApplicationForm({ copy, locale }: { copy: ApplicationC
           error={state.fieldErrors.organizationType}
         >
           <select
+            suppressHydrationWarning
             name="organizationType"
             value={values.organizationType}
             onChange={(e) => setValues({ ...values, organizationType: e.target.value })}
@@ -120,6 +122,7 @@ export function MembershipApplicationForm({ copy, locale }: { copy: ApplicationC
 
         <Field label={copy.form.contactName} required={copy.form.required} error={state.fieldErrors.contactName}>
           <input
+            suppressHydrationWarning
             name="contactName"
             value={values.contactName}
             onChange={(e) => setValues({ ...values, contactName: e.target.value })}
@@ -132,6 +135,7 @@ export function MembershipApplicationForm({ copy, locale }: { copy: ApplicationC
 
         <Field label={copy.form.role} required={copy.form.required} error={state.fieldErrors.role}>
           <input
+            suppressHydrationWarning
             name="role"
             value={values.role}
             onChange={(e) => setValues({ ...values, role: e.target.value })}
@@ -144,6 +148,7 @@ export function MembershipApplicationForm({ copy, locale }: { copy: ApplicationC
 
         <Field label={copy.form.email} required={copy.form.required} error={state.fieldErrors.email}>
           <input
+            suppressHydrationWarning
             name="email"
             type="email"
             value={values.email}
@@ -157,6 +162,7 @@ export function MembershipApplicationForm({ copy, locale }: { copy: ApplicationC
 
         <Field label={copy.form.phone} optional={copy.form.optional}>
           <input
+            suppressHydrationWarning
             name="phone"
             type="tel"
             value={values.phone}
@@ -175,6 +181,7 @@ export function MembershipApplicationForm({ copy, locale }: { copy: ApplicationC
           {copy.form.areaOptions.map((option) => (
             <label className="check-card" key={option.value}>
               <input
+            suppressHydrationWarning
                 type="checkbox"
                 name="areas"
                 value={option.value}
@@ -190,6 +197,7 @@ export function MembershipApplicationForm({ copy, locale }: { copy: ApplicationC
 
       <Field label={copy.form.message} required={copy.form.required} error={state.fieldErrors.message}>
         <textarea
+          suppressHydrationWarning
           name="message"
           value={values.message}
           onChange={(e) => setValues({ ...values, message: e.target.value })}
@@ -202,6 +210,7 @@ export function MembershipApplicationForm({ copy, locale }: { copy: ApplicationC
 
       <label className="consent-row">
         <input
+            suppressHydrationWarning
           type="checkbox"
           name="consent"
           checked={values.consent}
@@ -212,7 +221,7 @@ export function MembershipApplicationForm({ copy, locale }: { copy: ApplicationC
       </label>
       {state.fieldErrors.consent && <p className="field-error">{state.fieldErrors.consent}</p>}
 
-      <button className="button button-dark application-submit" type="submit" disabled={isPending}>
+      <button className="button button-dark application-submit" type="submit" disabled={isPending} suppressHydrationWarning>
         {isPending ? copy.form.submitting : copy.form.submit}
       </button>
     </form>
