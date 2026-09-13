@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+import { useId, useRef } from "react";
 import {
   MembershipApplicationForm,
   type ApplicationCopy,
@@ -28,6 +28,7 @@ export function MembershipApplicationModal({
   showArrow?: boolean;
 }) {
   const dialogRef = useRef<HTMLDialogElement>(null);
+  const titleId = useId();
 
   const open = () => dialogRef.current?.showModal();
   const close = () => dialogRef.current?.close();
@@ -41,7 +42,7 @@ export function MembershipApplicationModal({
       <dialog
         ref={dialogRef}
         className="membership-modal"
-        aria-labelledby="membership-modal-title"
+        aria-labelledby={titleId}
         onClick={(event) => {
           if (event.target === event.currentTarget) close();
         }}
@@ -58,7 +59,7 @@ export function MembershipApplicationModal({
 
           <div className="membership-modal-intro">
             <p className="kicker">{copy.kicker}</p>
-            <h2 id="membership-modal-title">{copy.title}</h2>
+            <h2 id={titleId}>{copy.title}</h2>
             <p>{copy.intro}</p>
             <div className="application-note">
               <strong>{copy.noteTitle}</strong>
