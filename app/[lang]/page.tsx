@@ -66,9 +66,12 @@ export default async function HomePage({ params }: { params: Promise<{ lang: str
       </section>
 
       <section className="principles">
-        <div className="shell split section-head">
-          <div><p className="kicker">{d.purpose.kicker}</p><h2>{d.purpose.title}</h2></div>
-          <p className="intro">{d.purpose.body}</p>
+        <div className="shell principles-head">
+          <p className="kicker">{d.purpose.kicker}</p>
+          <div className="principles-head-content">
+            <h2>{d.purpose.title}</h2>
+            <p className="intro">{d.purpose.body}</p>
+          </div>
         </div>
         <div className="shell principles-grid">
           {d.purpose.principles.map((item, i) => (
