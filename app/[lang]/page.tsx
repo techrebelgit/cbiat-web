@@ -1,5 +1,5 @@
-import Link from "next/link";
 import { notFound } from "next/navigation";
+import { MembershipApplicationModal } from "@/components/membership-application-modal";
 import { getDictionary, isLocale } from "@/lib/i18n";
 
 export default async function HomePage({ params }: { params: Promise<{ lang: string }> }) {
@@ -17,7 +17,7 @@ export default async function HomePage({ params }: { params: Promise<{ lang: str
             <p className="hero-body">{d.hero.body}</p>
             <div className="hero-actions">
               <a className="button button-gold" href="#camara">{d.hero.primary}</a>
-              <Link className="text-link" href={`/${lang}/afiliate`}>{d.hero.secondary} ↗</Link>
+              <MembershipApplicationModal copy={d.application} locale={lang} triggerLabel={d.hero.secondary} triggerClassName="text-link modal-text-trigger" showArrow />
             </div>
           </div>
           <div className="hero-visual">
@@ -100,7 +100,7 @@ export default async function HomePage({ params }: { params: Promise<{ lang: str
         <div className="shell membership-grid">
           {d.membership.pillars.map((item, i) => <article key={item.title}><span>{String(i + 1).padStart(2, "0")}</span><h3>{item.title}</h3><p>{item.body}</p></article>)}
         </div>
-        <div className="shell membership-cta"><Link className="button button-dark" href={`/${lang}/afiliate`}>{d.membership.cta}</Link></div>
+        <div className="shell membership-cta"><MembershipApplicationModal copy={d.application} locale={lang} triggerLabel={d.membership.cta} triggerClassName="button button-dark" /></div>
       </section>
     </main>
   );
