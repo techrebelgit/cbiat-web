@@ -1,6 +1,6 @@
 "use client";
 
-import { useActionState, useState, type ReactNode } from "react";
+import { useActionState, useId, useState, type ReactNode } from "react";
 import { submitMembershipApplication, type MembershipFormState } from "@/app/actions/membership";
 
 type Option = { value: string; label: string };
@@ -42,6 +42,7 @@ const initialState: MembershipFormState = {
 
 export function MembershipApplicationForm({ copy, locale }: { copy: ApplicationCopy; locale: "es" | "en" }) {
   const [state, formAction, isPending] = useActionState(submitMembershipApplication, initialState);
+  const honeypotId = useId();
   const [values, setValues] = useState({
     organization: "",
     contactName: "",
@@ -75,8 +76,8 @@ export function MembershipApplicationForm({ copy, locale }: { copy: ApplicationC
     <form action={formAction} className="application-form" noValidate>
       <input type="hidden" name="locale" value={locale} />
       <div className="honeypot" aria-hidden="true">
-        <label htmlFor="website">Website</label>
-        <input id="website" name="website" type="text" tabIndex={-1} autoComplete="off" />
+        <label htmlFor={honeypotId}>Website</label>
+        <input id={honeypotId} name="website" type="text" tabIndex={-1} autoComplete="off" />
       </div>
 
       {state.status === "error" && state.message && (
