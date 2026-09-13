@@ -5,7 +5,7 @@ import { submitMembershipApplication, type MembershipFormState } from "@/app/act
 
 type Option = { value: string; label: string };
 
-type ApplicationCopy = {
+export type ApplicationCopy = {
   form: {
     organization: string;
     organizationPlaceholder: string;
@@ -72,7 +72,8 @@ export function MembershipApplicationForm({ copy, locale }: { copy: ApplicationC
   };
 
   return (
-    <form action={formAction} className="application-form" noValidate>\n      <input type="hidden" name="locale" value={locale} />
+    <form action={formAction} className="application-form" noValidate>
+      <input type="hidden" name="locale" value={locale} />
       <div className="honeypot" aria-hidden="true">
         <label htmlFor="website">Website</label>
         <input id="website" name="website" type="text" tabIndex={-1} autoComplete="off" />
