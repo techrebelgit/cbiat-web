@@ -47,7 +47,7 @@ export default async function LocaleLayout({
           <div className="shell header-inner">
             <Link className="brand official-brand" href={`/${lang}`} aria-label="CBIAT Costa Rica">
               <span className="brand-official-mark" aria-hidden="true">
-                <img src="/brand/Logo CBIAT (fondo blanco).png" alt="" />
+                <img src="/brand/cbiat-logo-color.png" alt="" width="83" height="48" />
               </span>
               <span><strong>CBIAT</strong><small>Costa Rica</small></span>
             </Link>
@@ -71,10 +71,10 @@ export default async function LocaleLayout({
             <div className="footer-brand-block">
               <img
                 className="footer-official-logo"
-                src="/brand/Logo CBIAT (logo blanco).png"
+                src="/brand/cbiat-logo-white.png"
                 alt="CBIAT — Cámara de Blockchain, IA y Tecnologías Emergentes de Costa Rica"
-                width="500"
-                height="290"
+                width="2048"
+                height="1188"
               />
               <p>{d.footer.tagline}</p>
             </div>
