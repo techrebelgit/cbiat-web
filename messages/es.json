@@ -9,14 +9,14 @@
     "work": "Nuestro trabajo",
     "participation": "Participación",
     "knowledge": "Conocimiento",
-    "join": "Afíliese"
+    "join": "Conecte"
   },
   "hero": {
     "eyebrow": "Cámara Costarricense de Blockchain, Inteligencia Artificial y Tecnologías Emergentes",
     "title": "Tecnología que impulsa un mejor Costa Rica.",
     "body": "Articulamos al sector privado, la academia, el sector público y la sociedad para fortalecer el ecosistema tecnológico costarricense e impulsar una adopción ética, responsable, competitiva y sostenible.",
     "primary": "Conozca CBIAT",
-    "secondary": "Afíliese",
+    "secondary": "Manténgase informado",
     "stakeholders": [
       "Industria",
       "Academia",
@@ -146,7 +146,7 @@
         "body": "Intégrese a una red multisectorial y genere alianzas, proyectos y oportunidades de alto impacto."
       }
     ],
-    "cta": "Solicite información"
+    "cta": "Conecte con CBIAT"
   },
   "footer": {
     "tagline": "Costa Rica conecta al mañana.",
@@ -156,70 +156,35 @@
     "language": "English"
   },
   "application": {
-    "metaTitle": "Afíliese | CBIAT Costa Rica",
-    "metaDescription": "Solicite información para formar parte de CBIAT y participar en el desarrollo del ecosistema tecnológico de Costa Rica.",
-    "kicker": "Afiliación",
-    "title": "Sea parte de quienes están construyendo el futuro tecnológico de Costa Rica.",
-    "intro": "Complete este formulario para conocer las opciones de participación y afiliación a CBIAT. Nuestro equipo revisará la información y se pondrá en contacto con usted.",
-    "noteTitle": "¿Qué sucede después?",
-    "noteBody": "Esta solicitud no constituye una afiliación automática. CBIAT revisará cada solicitud y dará seguimiento para conocer mejor a la organización y su interés en participar.",
-    "asideKicker": "Proceso",
-    "asideTitle": "Una conversación antes de afiliarse.",
+    "metaTitle": "Conecte con CBIAT | CBIAT Costa Rica",
+    "metaDescription": "Manténgase al día con la transformación tecnológica de Costa Rica y reciba novedades, invitaciones y actualizaciones de CBIAT.",
+    "kicker": "Conecte con CBIAT",
+    "title": "Manténgase al día con la transformación tecnológica de Costa Rica.",
+    "intro": "Reciba en su correo novedades de CBIAT, invitaciones a eventos y actividades, y actualizaciones sobre nuestras iniciativas en blockchain, inteligencia artificial y tecnologías emergentes, incluido el avance del proyecto de ley que impulsamos.",
+    "noteTitle": "¿Qué recibirá?",
+    "noteBody": "Información sobre actividades, espacios de formación, avances legislativos y oportunidades de participación y colaboración.",
+    "disclaimer": "Este registro es informativo y no implica afiliación a la Cámara.",
+    "asideKicker": "Manténgase informado",
+    "asideTitle": "Las novedades de CBIAT, en su correo.",
     "steps": [
-      "Envíe la información básica de su organización y sus áreas de interés.",
-      "El equipo de CBIAT revisará la solicitud y coordinará el seguimiento correspondiente.",
-      "Conversaremos sobre participación, beneficios y el encaje con la Cámara."
+      "Comparta sus datos de contacto.",
+      "Seleccione los temas sobre los que le gustaría recibir información.",
+      "Reciba novedades e invitaciones de la Cámara."
     ],
-    "successTitle": "Solicitud recibida",
+    "successTitle": "¡Gracias por conectar con CBIAT!",
     "form": {
       "organization": "Organización / empresa",
       "organizationPlaceholder": "Nombre de la organización",
-      "contactName": "Nombre de contacto",
+      "contactName": "Nombre",
       "contactNamePlaceholder": "Nombre y apellidos",
       "role": "Cargo / rol",
       "rolePlaceholder": "Ej. Gerencia, fundador, directora académica",
       "email": "Correo electrónico",
-      "emailPlaceholder": "nombre@organizacion.com",
+      "emailPlaceholder": "nombre@correo.com",
       "phone": "Teléfono",
       "phonePlaceholder": "+506 ...",
-      "organizationType": "Tipo de organización",
-      "organizationTypePlaceholder": "Seleccione una opción",
-      "organizationTypes": [
-        {
-          "value": "company",
-          "label": "Empresa"
-        },
-        {
-          "value": "startup",
-          "label": "Startup"
-        },
-        {
-          "value": "academia",
-          "label": "Academia"
-        },
-        {
-          "value": "public-sector",
-          "label": "Sector público"
-        },
-        {
-          "value": "investor",
-          "label": "Inversionista"
-        },
-        {
-          "value": "nonprofit",
-          "label": "Organización sin fines de lucro"
-        },
-        {
-          "value": "professional",
-          "label": "Profesional / independiente"
-        },
-        {
-          "value": "other",
-          "label": "Otro"
-        }
-      ],
-      "areas": "Áreas de interés",
-      "areasHelp": "Seleccione una o varias áreas en las que le interesa participar o colaborar.",
+      "areas": "Temas de interés",
+      "areasHelp": "Seleccione uno o varios temas sobre los que le gustaría recibir información.",
       "areaOptions": [
         {
           "value": "ai-governance",
@@ -250,11 +215,11 @@
           "label": "Innovación e internacionalización"
         }
       ],
-      "message": "¿Por qué le interesa formar parte de CBIAT?",
-      "messagePlaceholder": "Cuéntenos brevemente sobre su organización, sus objetivos y cómo le gustaría participar.",
-      "consent": "Autorizo a CBIAT a utilizar esta información para contactarme y dar seguimiento a esta solicitud.",
-      "submit": "Enviar solicitud",
-      "submitting": "Enviando...",
+      "message": "¿Hay algún tema o actividad que le interese especialmente?",
+      "messagePlaceholder": "Cuéntenos qué le gustaría conocer o qué actividades le gustaría que promoviera CBIAT.",
+      "consent": "Deseo recibir por correo electrónico información de CBIAT sobre novedades, eventos, iniciativas y oportunidades de participación, y autorizo el uso de mis datos para este fin conforme al aviso de privacidad.",
+      "submit": "Quiero recibir información",
+      "submitting": "Registrando...",
       "required": "Requerido",
       "optional": "Opcional"
     }
