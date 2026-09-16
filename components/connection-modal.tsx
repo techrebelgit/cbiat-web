@@ -1,20 +1,18 @@
 "use client";
 
 import { useId, useRef } from "react";
-import {
-  MembershipApplicationForm,
-  type ApplicationCopy,
-} from "@/components/membership-application-form";
+import { ConnectionForm, type ConnectionCopy } from "@/components/connection-form";
 
-type ModalCopy = ApplicationCopy & {
+type ModalCopy = ConnectionCopy & {
   kicker: string;
   title: string;
   intro: string;
   noteTitle: string;
   noteBody: string;
+  disclaimer: string;
 };
 
-export function MembershipApplicationModal({
+export function ConnectionModal({
   copy,
   locale,
   triggerLabel,
@@ -66,9 +64,10 @@ export function MembershipApplicationModal({
               <strong>{copy.noteTitle}</strong>
               <span>{copy.noteBody}</span>
             </div>
+            <p className="application-disclaimer">{copy.disclaimer}</p>
           </div>
 
-          <MembershipApplicationForm copy={copy} locale={locale} />
+          <ConnectionForm copy={copy} locale={locale} />
         </div>
       </dialog>
     </>

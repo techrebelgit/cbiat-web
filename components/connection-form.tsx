@@ -1,11 +1,11 @@
 "use client";
 
 import { useActionState, useId, useState, type ReactNode } from "react";
-import { submitMembershipApplication, type MembershipFormState } from "@/app/actions/membership";
+import { submitConnectionRegistration, type ConnectionFormState } from "@/app/actions/connect";
 
 type Option = { value: string; label: string };
 
-export type ApplicationCopy = {
+export type ConnectionCopy = {
   form: {
     organization: string;
     organizationPlaceholder: string;
@@ -17,9 +17,6 @@ export type ApplicationCopy = {
     emailPlaceholder: string;
     phone: string;
     phonePlaceholder: string;
-    organizationType: string;
-    organizationTypePlaceholder: string;
-    organizationTypes: Option[];
     areas: string;
     areasHelp: string;
     areaOptions: Option[];
@@ -34,14 +31,14 @@ export type ApplicationCopy = {
   successTitle: string;
 };
 
-const initialState: MembershipFormState = {
+const initialState: ConnectionFormState = {
   status: "idle",
   message: "",
   fieldErrors: {},
 };
 
-export function MembershipApplicationForm({ copy, locale }: { copy: ApplicationCopy; locale: "es" | "en" }) {
-  const [state, formAction, isPending] = useActionState(submitMembershipApplication, initialState);
+export function ConnectionForm({ copy, locale }: { copy: ConnectionCopy; locale: "es" | "en" }) {
+  const [state, formAction, isPending] = useActionState(submitConnectionRegistration, initialState);
   const honeypotId = useId();
   const [values, setValues] = useState({
     organization: "",
@@ -49,7 +46,6 @@ export function MembershipApplicationForm({ copy, locale }: { copy: ApplicationC
     role: "",
     email: "",
     phone: "",
-    organizationType: "",
     areas: [] as string[],
     message: "",
     consent: false,
@@ -85,41 +81,6 @@ export function MembershipApplicationForm({ copy, locale }: { copy: ApplicationC
       )}
 
       <div className="form-grid">
-        <Field
-          label={copy.form.organization}
-          required={copy.form.required}
-          error={state.fieldErrors.organization}
-        >
-          <input
-            suppressHydrationWarning
-            name="organization"
-            value={values.organization}
-            onChange={(e) => setValues({ ...values, organization: e.target.value })}
-            placeholder={copy.form.organizationPlaceholder}
-            maxLength={160}
-            required
-          />
-        </Field>
-
-        <Field
-          label={copy.form.organizationType}
-          required={copy.form.required}
-          error={state.fieldErrors.organizationType}
-        >
-          <select
-            suppressHydrationWarning
-            name="organizationType"
-            value={values.organizationType}
-            onChange={(e) => setValues({ ...values, organizationType: e.target.value })}
-            required
-          >
-            <option value="">{copy.form.organizationTypePlaceholder}</option>
-            {copy.form.organizationTypes.map((option) => (
-              <option value={option.value} key={option.value}>{option.label}</option>
-            ))}
-          </select>
-        </Field>
-
         <Field label={copy.form.contactName} required={copy.form.required} error={state.fieldErrors.contactName}>
           <input
             suppressHydrationWarning
@@ -129,19 +90,6 @@ export function MembershipApplicationForm({ copy, locale }: { copy: ApplicationC
             placeholder={copy.form.contactNamePlaceholder}
             maxLength={120}
             autoComplete="name"
-            required
-          />
-        </Field>
-
-        <Field label={copy.form.role} required={copy.form.required} error={state.fieldErrors.role}>
-          <input
-            suppressHydrationWarning
-            name="role"
-            value={values.role}
-            onChange={(e) => setValues({ ...values, role: e.target.value })}
-            placeholder={copy.form.rolePlaceholder}
-            maxLength={120}
-            autoComplete="organization-title"
             required
           />
         </Field>
@@ -157,6 +105,30 @@ export function MembershipApplicationForm({ copy, locale }: { copy: ApplicationC
             maxLength={200}
             autoComplete="email"
             required
+          />
+        </Field>
+
+        <Field label={copy.form.organization} optional={copy.form.optional}>
+          <input
+            suppressHydrationWarning
+            name="organization"
+            value={values.organization}
+            onChange={(e) => setValues({ ...values, organization: e.target.value })}
+            placeholder={copy.form.organizationPlaceholder}
+            maxLength={160}
+            autoComplete="organization"
+          />
+        </Field>
+
+        <Field label={copy.form.role} optional={copy.form.optional}>
+          <input
+            suppressHydrationWarning
+            name="role"
+            value={values.role}
+            onChange={(e) => setValues({ ...values, role: e.target.value })}
+            placeholder={copy.form.rolePlaceholder}
+            maxLength={120}
+            autoComplete="organization-title"
           />
         </Field>
 
@@ -181,7 +153,7 @@ export function MembershipApplicationForm({ copy, locale }: { copy: ApplicationC
           {copy.form.areaOptions.map((option) => (
             <label className="check-card" key={option.value}>
               <input
-            suppressHydrationWarning
+                suppressHydrationWarning
                 type="checkbox"
                 name="areas"
                 value={option.value}
@@ -195,22 +167,21 @@ export function MembershipApplicationForm({ copy, locale }: { copy: ApplicationC
         {state.fieldErrors.areas && <p className="field-error">{state.fieldErrors.areas}</p>}
       </fieldset>
 
-      <Field label={copy.form.message} required={copy.form.required} error={state.fieldErrors.message}>
+      <Field label={copy.form.message} optional={copy.form.optional}>
         <textarea
           suppressHydrationWarning
           name="message"
           value={values.message}
           onChange={(e) => setValues({ ...values, message: e.target.value })}
           placeholder={copy.form.messagePlaceholder}
-          rows={6}
+          rows={5}
           maxLength={2000}
-          required
         />
       </Field>
 
       <label className="consent-row">
         <input
-            suppressHydrationWarning
+          suppressHydrationWarning
           type="checkbox"
           name="consent"
           checked={values.consent}

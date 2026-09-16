@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { MembershipApplicationModal } from "@/components/membership-application-modal";
+import { ConnectionModal } from "@/components/connection-modal";
 import { ResponsiveNavigation } from "@/components/responsive-navigation";
 import { notFound } from "next/navigation";
 import { getDictionary, isLocale, locales, type Locale } from "@/lib/i18n";
@@ -45,8 +45,10 @@ export default async function LocaleLayout({
       <body>
         <header className="site-header">
           <div className="shell header-inner">
-            <Link className="brand" href={`/${lang}`} aria-label="CBIAT">
-              <span className="brand-mark">C</span>
+            <Link className="brand official-brand" href={`/${lang}`} aria-label="CBIAT Costa Rica">
+              <span className="brand-official-mark" aria-hidden="true">
+                <img src="/brand/cbiat-logo-color.png" alt="" width="83" height="48" />
+              </span>
               <span><strong>CBIAT</strong><small>Costa Rica</small></span>
             </Link>
             <nav className="desktop-nav" aria-label="Primary">
@@ -59,14 +61,23 @@ export default async function LocaleLayout({
             <div className="header-actions">
               <ResponsiveNavigation lang={lang} labels={d.nav} />
               <Link className="lang-link" href={`/${altLang}`}>{altLabel}</Link>
-              <MembershipApplicationModal copy={d.application} locale={lang} triggerLabel={d.nav.join} triggerClassName="button button-dark button-small" />
+              <ConnectionModal copy={d.application} locale={lang} triggerLabel={d.nav.join} triggerClassName="button button-dark button-small" />
             </div>
           </div>
         </header>
         {children}
         <footer className="site-footer">
           <div className="shell footer-grid">
-            <div><div className="footer-brand">CBIAT</div><p>{d.footer.tagline}</p></div>
+            <div className="footer-brand-block">
+              <img
+                className="footer-official-logo"
+                src="/brand/cbiat-logo-white.png"
+                alt="CBIAT — Cámara de Blockchain, IA y Tecnologías Emergentes de Costa Rica"
+                width="2048"
+                height="1188"
+              />
+              <p>{d.footer.tagline}</p>
+            </div>
             <div className="footer-meta">
               <div><span>{d.footer.contact}</span><a href={`mailto:${d.footer.email}`}>{d.footer.email}</a></div>
               <div><span>{d.footer.location}</span><a href="https://cbiat.org">cbiat.org</a></div>

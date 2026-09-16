@@ -534,3 +534,65 @@ h1,h2,h3,p,a,span,strong{overflow-wrap:break-word}
     min-height:0;
   }
 }
+
+
+/* Official CBIAT brand assets */
+.official-brand{gap:10px}
+.brand-official-mark{
+  display:block;
+  width:38px;
+  height:48px;
+  overflow:hidden;
+  flex:0 0 auto;
+}
+.brand-official-mark img{
+  display:block;
+  height:48px;
+  width:auto;
+  max-width:none;
+}
+.footer-brand-block{min-width:0}
+.footer-official-logo{
+  display:block;
+  width:min(340px,100%);
+  height:auto;
+  margin:0 0 22px;
+}
+.footer-brand-block p{
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:clamp(28px,3vw,36px);
+  line-height:1.08;
+  max-width:430px;
+  margin:0;
+}
+
+@media(max-width:760px){
+  .brand-official-mark{width:34px;height:44px}
+  .brand-official-mark img{height:44px}
+  .official-brand{gap:8px}
+  .footer-official-logo{width:min(300px,100%)}
+}
+@media(max-width:520px){
+  .brand-official-mark{width:31px;height:40px}
+  .brand-official-mark img{height:40px}
+  .footer-official-logo{width:min(270px,100%);margin-bottom:18px}
+  .footer-brand-block p{font-size:30px}
+}
+@media(max-width:420px){
+  .brand-official-mark{width:29px;height:38px}
+  .brand-official-mark img{height:38px}
+}
+
+/* Informational connection flow */
+.application-disclaimer{
+  margin:18px 0 0;
+  padding-top:16px;
+  border-top:1px solid #ccc7bd;
+  color:var(--muted);
+  font-size:13px;
+  line-height:1.55;
+}
+.membership-modal-intro .application-disclaimer{
+  margin-top:18px;
+  font-size:13px;
+}

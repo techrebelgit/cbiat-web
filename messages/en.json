@@ -9,14 +9,14 @@
     "work": "Our work",
     "participation": "Participation",
     "knowledge": "Knowledge",
-    "join": "Become a member"
+    "join": "Connect"
   },
   "hero": {
     "eyebrow": "Costa Rican Chamber of Blockchain, Artificial Intelligence & Emerging Technologies",
     "title": "Technology for a stronger Costa Rica.",
     "body": "We bring together the private sector, academia, government and society to strengthen Costa Rica's technology ecosystem and advance ethical, responsible, competitive and sustainable adoption.",
     "primary": "Discover CBIAT",
-    "secondary": "Become a member",
+    "secondary": "Stay informed",
     "stakeholders": [
       "Industry",
       "Academia",
@@ -146,7 +146,7 @@
         "body": "Join a multisector network and create alliances, projects and high-impact opportunities."
       }
     ],
-    "cta": "Request information"
+    "cta": "Connect with CBIAT"
   },
   "footer": {
     "tagline": "Costa Rica connects to tomorrow.",
@@ -156,70 +156,35 @@
     "language": "Español"
   },
   "application": {
-    "metaTitle": "Membership | CBIAT Costa Rica",
-    "metaDescription": "Request information about joining CBIAT and participating in the development of Costa Rica's technology ecosystem.",
-    "kicker": "Membership",
-    "title": "Join the people building Costa Rica's technology future.",
-    "intro": "Complete this form to learn about participation and membership options at CBIAT. Our team will review the information and follow up with you.",
-    "noteTitle": "What happens next?",
-    "noteBody": "Submitting this form does not create an automatic membership. CBIAT will review each request and follow up to better understand the organization and its interest in participating.",
-    "asideKicker": "Process",
-    "asideTitle": "A conversation before membership.",
+    "metaTitle": "Connect with CBIAT | CBIAT Costa Rica",
+    "metaDescription": "Stay up to date with Costa Rica's technology transformation and receive CBIAT news, invitations and initiative updates.",
+    "kicker": "Connect with CBIAT",
+    "title": "Stay up to date with Costa Rica's technology transformation.",
+    "intro": "Receive CBIAT news, invitations to events and activities, and updates on our blockchain, artificial intelligence and emerging technology initiatives, including progress on the bill we are advancing.",
+    "noteTitle": "What will you receive?",
+    "noteBody": "Information about activities, learning opportunities, legislative developments, and opportunities to participate and collaborate.",
+    "disclaimer": "This registration is informational and does not imply membership in the Chamber.",
+    "asideKicker": "Stay informed",
+    "asideTitle": "CBIAT updates, in your inbox.",
     "steps": [
-      "Send the basic information about your organization and areas of interest.",
-      "The CBIAT team will review the request and coordinate the appropriate follow-up.",
-      "We will discuss participation, benefits and fit with the Chamber."
+      "Share your contact information.",
+      "Select the topics you would like to hear about.",
+      "Receive news and invitations from the Chamber."
     ],
-    "successTitle": "Request received",
+    "successTitle": "Thank you for connecting with CBIAT!",
     "form": {
       "organization": "Organization / company",
       "organizationPlaceholder": "Organization name",
-      "contactName": "Contact name",
+      "contactName": "Name",
       "contactNamePlaceholder": "Full name",
       "role": "Role / title",
       "rolePlaceholder": "E.g. Managing Director, founder, academic director",
       "email": "Email",
-      "emailPlaceholder": "name@organization.com",
+      "emailPlaceholder": "name@email.com",
       "phone": "Phone",
-      "phonePlaceholder": "+506 ...",
-      "organizationType": "Organization type",
-      "organizationTypePlaceholder": "Select an option",
-      "organizationTypes": [
-        {
-          "value": "company",
-          "label": "Company"
-        },
-        {
-          "value": "startup",
-          "label": "Startup"
-        },
-        {
-          "value": "academia",
-          "label": "Academia"
-        },
-        {
-          "value": "public-sector",
-          "label": "Public sector"
-        },
-        {
-          "value": "investor",
-          "label": "Investor"
-        },
-        {
-          "value": "nonprofit",
-          "label": "Nonprofit organization"
-        },
-        {
-          "value": "professional",
-          "label": "Professional / independent"
-        },
-        {
-          "value": "other",
-          "label": "Other"
-        }
-      ],
-      "areas": "Areas of interest",
-      "areasHelp": "Select one or more areas where you would like to participate or collaborate.",
+      "phonePlaceholder": "+1 ...",
+      "areas": "Topics of interest",
+      "areasHelp": "Select one or more topics you would like to receive information about.",
       "areaOptions": [
         {
           "value": "ai-governance",
@@ -250,11 +215,11 @@
           "label": "Innovation and internationalization"
         }
       ],
-      "message": "Why are you interested in joining CBIAT?",
-      "messagePlaceholder": "Tell us briefly about your organization, your goals and how you would like to participate.",
-      "consent": "I authorize CBIAT to use this information to contact me and follow up on this request.",
-      "submit": "Submit request",
-      "submitting": "Submitting...",
+      "message": "Is there a topic or activity you are especially interested in?",
+      "messagePlaceholder": "Tell us what you would like to learn about or what activities you would like CBIAT to promote.",
+      "consent": "I would like to receive CBIAT information by email about news, events, initiatives and participation opportunities, and I authorize the use of my data for this purpose in accordance with the privacy notice.",
+      "submit": "I want to receive updates",
+      "submitting": "Registering...",
       "required": "Required",
       "optional": "Optional"
     }
