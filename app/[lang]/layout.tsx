@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { MembershipApplicationModal } from "@/components/membership-application-modal";
+import { ConnectionModal } from "@/components/connection-modal";
 import { ResponsiveNavigation } from "@/components/responsive-navigation";
 import { notFound } from "next/navigation";
 import { getDictionary, isLocale, locales, type Locale } from "@/lib/i18n";
@@ -61,7 +61,7 @@ export default async function LocaleLayout({
             <div className="header-actions">
               <ResponsiveNavigation lang={lang} labels={d.nav} />
               <Link className="lang-link" href={`/${altLang}`}>{altLabel}</Link>
-              <MembershipApplicationModal copy={d.application} locale={lang} triggerLabel={d.nav.join} triggerClassName="button button-dark button-small" />
+              <ConnectionModal copy={d.application} locale={lang} triggerLabel={d.nav.join} triggerClassName="button button-dark button-small" />
             </div>
           </div>
         </header>
