@@ -582,3 +582,17 @@ h1,h2,h3,p,a,span,strong{overflow-wrap:break-word}
   .brand-official-mark{width:29px;height:38px}
   .brand-official-mark img{height:38px}
 }
+
+/* Informational connection flow */
+.application-disclaimer{
+  margin:18px 0 0;
+  padding-top:16px;
+  border-top:1px solid #ccc7bd;
+  color:var(--muted);
+  font-size:13px;
+  line-height:1.55;
+}
+.membership-modal-intro .application-disclaimer{
+  margin-top:18px;
+  font-size:13px;
+}
