@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import { MembershipApplicationModal } from "@/components/membership-application-modal";
+import { ConnectionModal } from "@/components/connection-modal";
 import { getDictionary, isLocale } from "@/lib/i18n";
 
 export default async function HomePage({ params }: { params: Promise<{ lang: string }> }) {
@@ -17,7 +17,7 @@ export default async function HomePage({ params }: { params: Promise<{ lang: str
             <p className="hero-body">{d.hero.body}</p>
             <div className="hero-actions">
               <a className="button button-gold" href="#camara">{d.hero.primary}</a>
-              <MembershipApplicationModal copy={d.application} locale={lang} triggerLabel={d.hero.secondary} triggerClassName="text-link modal-text-trigger" showArrow />
+              <ConnectionModal copy={d.application} locale={lang} triggerLabel={d.hero.secondary} triggerClassName="text-link modal-text-trigger" showArrow />
             </div>
           </div>
           <div className="hero-visual">
@@ -98,12 +98,12 @@ export default async function HomePage({ params }: { params: Promise<{ lang: str
         </div>
       </section>
 
-      <section className="membership" id="afiliate">
+      <section className="membership" id="conecte">
         <div className="shell membership-head"><p className="kicker">{d.membership.kicker}</p><h2>{d.membership.title}</h2><p className="intro">{d.membership.body}</p></div>
         <div className="shell membership-grid">
           {d.membership.pillars.map((item, i) => <article key={item.title}><span>{String(i + 1).padStart(2, "0")}</span><h3>{item.title}</h3><p>{item.body}</p></article>)}
         </div>
-        <div className="shell membership-cta"><MembershipApplicationModal copy={d.application} locale={lang} triggerLabel={d.membership.cta} triggerClassName="button button-dark" /></div>
+        <div className="shell membership-cta"><ConnectionModal copy={d.application} locale={lang} triggerLabel={d.membership.cta} triggerClassName="button button-dark" /></div>
       </section>
     </main>
   );
