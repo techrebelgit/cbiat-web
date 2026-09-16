@@ -45,8 +45,8 @@ export default async function LocaleLayout({
       <body>
         <header className="site-header">
           <div className="shell header-inner">
-            <Link className="brand" href={`/${lang}`} aria-label="CBIAT">
-              <span className="brand-mark">C</span>
+            <Link className="brand official-brand" href={`/${lang}`} aria-label="CBIAT Costa Rica">
+              <img className="brand-official-mark" src="/brand/cbiat-mark-color.svg" alt="" width="36" height="52" />
               <span><strong>CBIAT</strong><small>Costa Rica</small></span>
             </Link>
             <nav className="desktop-nav" aria-label="Primary">
@@ -66,7 +66,16 @@ export default async function LocaleLayout({
         {children}
         <footer className="site-footer">
           <div className="shell footer-grid">
-            <div><div className="footer-brand">CBIAT</div><p>{d.footer.tagline}</p></div>
+            <div className="footer-brand-block">
+              <img
+                className="footer-official-logo"
+                src="/brand/cbiat-logo-white.svg"
+                alt="CBIAT — Cámara de Blockchain, IA y Tecnologías Emergentes de Costa Rica"
+                width="500"
+                height="290"
+              />
+              <p>{d.footer.tagline}</p>
+            </div>
             <div className="footer-meta">
               <div><span>{d.footer.contact}</span><a href={`mailto:${d.footer.email}`}>{d.footer.email}</a></div>
               <div><span>{d.footer.location}</span><a href="https://cbiat.org">cbiat.org</a></div>
