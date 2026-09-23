@@ -10,6 +10,22 @@ export default async function HomePage({ params }: { params: Promise<{ lang: str
   return (
     <main>
       <section className="hero">
+        <div className="shell event-banner-wrap">
+          <a
+            className="event-banner"
+            href="https://luma.com/dk33kd20"
+            target="_blank"
+            rel="noreferrer"
+            aria-label={`${d.eventBanner.title} — ${d.eventBanner.cta}`}
+          >
+            <span className="event-banner-label">{d.eventBanner.label}</span>
+            <span className="event-banner-copy">
+              <strong>{d.eventBanner.title}</strong>
+              <small>{d.eventBanner.meta}</small>
+            </span>
+            <span className="event-banner-cta">{d.eventBanner.cta} ↗</span>
+          </a>
+        </div>
         <div className="shell hero-grid">
           <div>
             <p className="eyebrow">{d.hero.eyebrow}</p>

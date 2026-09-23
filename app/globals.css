@@ -596,3 +596,114 @@ h1,h2,h3,p,a,span,strong{overflow-wrap:break-word}
   margin-top:18px;
   font-size:13px;
 }
+
+
+/* Temporary event announcement */
+.event-banner-wrap{padding-top:22px}
+.event-banner{
+  display:grid;
+  grid-template-columns:auto minmax(0,1fr) auto;
+  align-items:center;
+  gap:18px;
+  width:100%;
+  padding:14px 18px;
+  border:1px solid rgba(6,26,56,.18);
+  background:rgba(255,254,251,.72);
+  transition:background .2s ease,border-color .2s ease;
+}
+.event-banner:hover{
+  background:var(--paper);
+  border-color:rgba(6,26,56,.35);
+}
+.event-banner-label{
+  display:inline-flex;
+  align-items:center;
+  min-height:30px;
+  padding:0 10px;
+  background:var(--gold);
+  color:var(--navy);
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  white-space:nowrap;
+}
+.event-banner-copy{
+  min-width:0;
+  display:flex;
+  align-items:baseline;
+  gap:12px;
+}
+.event-banner-copy strong{
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:16px;
+  font-weight:500;
+  line-height:1.25;
+}
+.event-banner-copy small{
+  color:var(--muted);
+  font-size:12px;
+  white-space:nowrap;
+}
+.event-banner-cta{
+  font-size:12px;
+  font-weight:800;
+  white-space:nowrap;
+}
+
+/* Mobile navigation: anchor the dropdown to the viewport, not to the menu trigger.
+   The trigger sits before language/connect actions, so right:0 on the <details>
+   could push a wide dropdown off the left side of small screens. */
+@media(max-width:1120px){
+  .mobile-nav-panel{
+    position:fixed;
+    top:82px;
+    left:20px;
+    right:20px;
+    width:auto;
+    max-width:none;
+    z-index:60;
+  }
+}
+@media(max-width:760px){
+  .event-banner-wrap{padding-top:14px}
+  .event-banner{
+    grid-template-columns:auto minmax(0,1fr);
+    gap:10px 12px;
+    padding:12px;
+  }
+  .event-banner-copy{
+    display:block;
+  }
+  .event-banner-copy strong{
+    display:block;
+    font-size:15px;
+    line-height:1.25;
+  }
+  .event-banner-copy small{
+    display:block;
+    margin-top:4px;
+    font-size:11px;
+    white-space:normal;
+  }
+  .event-banner-cta{
+    grid-column:2;
+    font-size:11px;
+  }
+  .mobile-nav-panel{
+    top:70px;
+    left:16px;
+    right:16px;
+  }
+}
+@media(max-width:520px){
+  .event-banner{
+    grid-template-columns:1fr;
+  }
+  .event-banner-label{
+    justify-self:start;
+  }
+  .event-banner-cta{
+    grid-column:1;
+  }
+}
