@@ -223,5 +223,11 @@
       "required": "Required",
       "optional": "Optional"
     }
+  },
+  "eventBanner": {
+    "label": "Upcoming event",
+    "title": "Presentation of the Framework Law on Digital Sovereignty and Emerging Technologies",
+    "meta": "September 24 · Legislative Assembly",
+    "cta": "View event"
   }
 }
