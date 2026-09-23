@@ -223,5 +223,11 @@
       "required": "Requerido",
       "optional": "Opcional"
     }
+  },
+  "eventBanner": {
+    "label": "Próximo evento",
+    "title": "Presentación de la Ley Marco de Soberanía Digital y Tecnologías Emergentes",
+    "meta": "24 de septiembre · Asamblea Legislativa",
+    "cta": "Ver evento"
   }
 }
