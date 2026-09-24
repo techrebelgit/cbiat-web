@@ -707,3 +707,26 @@ h1,h2,h3,p,a,span,strong{overflow-wrap:break-word}
     grid-column:1;
   }
 }
+
+
+/* Public law proposal document link */
+.desktop-nav .nav-document-link{
+  font-weight:700;
+  text-decoration:underline;
+  text-decoration-color:var(--gold);
+  text-decoration-thickness:2px;
+  text-underline-offset:6px;
+  white-space:nowrap;
+}
+.desktop-nav .nav-document-link:hover{
+  text-decoration-color:var(--navy);
+}
+.mobile-nav-panel .mobile-nav-document{
+  margin-top:8px;
+  border-bottom:0;
+  background:var(--navy);
+  color:#fff;
+}
+.mobile-nav-panel .mobile-nav-document:hover{
+  background:var(--navy2);
+}

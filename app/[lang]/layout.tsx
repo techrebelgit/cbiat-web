@@ -57,6 +57,14 @@ export default async function LocaleLayout({
               <Link href={`/${lang}#agenda`}>{d.nav.agenda}</Link>
               <Link href={`/${lang}#participacion`}>{d.nav.participation}</Link>
               <Link href={`/${lang}#conocimiento`}>{d.nav.knowledge}</Link>
+              <a
+                className="nav-document-link"
+                href="/files/Ley_Marco_Soberania_Digital_CR.pdf"
+                target="_blank"
+                rel="noreferrer"
+              >
+                {d.nav.lawProposal} ↗
+              </a>
             </nav>
             <div className="header-actions">
               <ResponsiveNavigation lang={lang} labels={d.nav} />
