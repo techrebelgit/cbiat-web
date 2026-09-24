@@ -9,6 +9,7 @@ type NavLabels = {
   agenda: string;
   participation: string;
   knowledge: string;
+  lawProposal: string;
 };
 
 export function ResponsiveNavigation({
@@ -35,6 +36,15 @@ export function ResponsiveNavigation({
         <Link onClick={close} href={`/${lang}#agenda`}>{labels.agenda}</Link>
         <Link onClick={close} href={`/${lang}#participacion`}>{labels.participation}</Link>
         <Link onClick={close} href={`/${lang}#conocimiento`}>{labels.knowledge}</Link>
+        <a
+          className="mobile-nav-document"
+          href="/files/Ley_Marco_Soberania_Digital_CR.pdf"
+          target="_blank"
+          rel="noreferrer"
+          onClick={close}
+        >
+          {labels.lawProposal} ↗
+        </a>
       </nav>
     </details>
   );
